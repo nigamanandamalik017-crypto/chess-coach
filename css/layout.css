@@ -1,0 +1,16 @@
+#app{max-width:980px;width:100%}
+.layout{display:grid;gap:12px;width:100%;justify-items:center}
+.stage{display:flex;gap:8px}
+.board{--s:min(calc(100vw - 72px),520px)}
+.evalbar{position:relative;width:26px;border-radius:8px;overflow:hidden;background:#2a2f36}
+.ev-white{position:absolute;left:0;right:0;bottom:0;height:50%;background:#f1f1f1;transition:height .6s ease}
+.ev-num{position:absolute;left:0;right:0;text-align:center;font:700 .6rem/1 system-ui}
+.evalbar.lead-w .ev-num{bottom:4px;color:#1b232c}.evalbar.lead-b .ev-num{top:4px;color:#e8edf2}
+.evalbar.flipped{transform:rotate(180deg)}.evalbar.flipped .ev-num{transform:rotate(180deg)}
+.sq.check{box-shadow:inset 0 0 0 100vmax rgba(217,83,79,.6)}
+.sq.mark{outline:3px solid #b69be0;outline-offset:-3px;box-shadow:inset 0 0 0 100vmax rgba(182,155,224,.35)}
+.sq.target.cap::after{width:88%;height:88%;background:none;border:4px solid var(--dot)}
+button:disabled{opacity:.45}
+@media(min-width:860px){.layout{grid-template-columns:auto 340px;justify-content:center;align-items:start}.side{height:520px}}
+.side{display:flex;flex-direction:column;gap:8px;width:100%;max-width:520px}
+.coach{flex:1;min-height:0}

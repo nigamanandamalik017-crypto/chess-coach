@@ -1,0 +1,15 @@
+#profile{border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--fg);padding:0;width:min(96vw,520px);max-height:92vh}
+#profile::backdrop{background:rgba(0,0,0,.65)}
+.pf{padding:14px;display:grid;gap:10px;max-height:90vh;overflow:auto}
+.pf h3{margin:6px 0 0;font-size:.95rem;color:var(--muted);font-weight:600}
+.pf-head{display:flex;gap:8px;align-items:center}
+.pf-head input{flex:1;min-width:0;font:inherit;color:var(--fg);background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 10px}
+.pf-avatar{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;font-weight:700;color:#fff;flex:none}
+.pf-hi{margin:0;font-size:1.1rem;font-weight:600}
+.pf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.pf-card{border:1px solid var(--line);border-radius:12px;padding:10px;background:var(--panel2)}
+.pf-card b{display:block;font-size:1.5rem;line-height:1.2}
+.pf-card span,.pf-card small{display:block}.pf-card small{color:var(--muted)}
+.pf-bars{display:flex;align-items:flex-end;gap:4px;height:64px}
+.pf-bars i{flex:1;background:var(--accent);border-radius:3px 3px 0 0}
+.pf-note{margin:0;color:var(--muted)}

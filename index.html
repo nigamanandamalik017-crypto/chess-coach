@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#16202b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/coach.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/themes.css">
+<link rel="stylesheet" href="css/history.css">
+<link rel="stylesheet" href="css/profile.css">
+<title>Chess Coach</title></head>
+<body>
+<main id="app">
+  <h1>Chess Coach</h1>
+  <p id="status" role="status">Loading engine…</p>
+  <div class="layout">
+    <div class="stage"><div id="evalbar" class="evalbar" aria-label="Evaluation bar"></div><div id="board"></div></div>
+    <div class="side"><section id="coach" class="coach" aria-label="Coach chat"></section><div id="lessonbar" class="lessonbar"></div></div>
+  </div>
+  <div class="controls">
+    <select id="level" aria-label="Opponent level"></select>
+    <select id="speed" aria-label="Opponent speed"></select>
+    <select id="theme" aria-label="Theme"></select>
+    <button id="hint">Hint</button>
+    <button id="undo">Undo</button>
+    <button id="new-w">New game: White</button>
+    <button id="new-b">New game: Black</button>
+    <button id="flip">Flip</button>
+    <button id="evtoggle">Eval bar: On</button>
+    <button id="profile-btn">Profile</button>
+    <button id="history-btn">History</button>
+  </div>
+</main>
+<dialog id="history" aria-label="Game history"></dialog>
+<dialog id="profile" aria-label="Profile"></dialog>
+<script type="module" src="js/main.js"></script>
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');</script>
+</body></html>
